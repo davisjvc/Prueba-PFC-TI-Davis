@@ -1,0 +1,44 @@
+﻿@model IEnumerable<ProyectoWeb.Models.Orden>
+
+@{
+    ViewBag.Title = "Listado Ordenes de Compra";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Listado de Ordenes de Compra</h3>
+<hr />
+
+<div class="row text-center">
+
+    <div class="table-responsive">
+        <table id="tblOrdenes" class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th> Orden Id </th>
+                    <th> Fecha </th>
+                    <th> Tipo de Pago </th>
+                    <th> Total </th>
+                    <th> Entregada </th>
+                    <th>  </th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div>
+    @Html.ActionLink("Regresar al listado de Clientes", "Index", "Clientes")
+</div>
+
+
+@section scripts
+{
+
+    @Scripts.Render("~/Scripts/CustomScripts/datatableOrdenes.js")
+
+    <script>
+        
+    </script>
+}
+

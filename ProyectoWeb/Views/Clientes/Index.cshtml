@@ -1,0 +1,45 @@
+﻿
+@model IEnumerable<PruebaPFC.Models.Cliente>
+
+@{
+    ViewBag.Title = "Listado de Clientes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>Listado de Clientes</h3>
+
+<div class="row text-center">
+    <p>
+        <button type="button" id="btnBusqueda" class="btn btn-primary">Consultar Clientes</button>
+    </p>
+    <br /> <br />
+    <div class="table-responsive">
+        <table id="tblClientes" class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th> Cliente Id </th>
+                    <th> Nombre </th>
+                    <th> Dirección </th>
+                    <th> Teléfono </th>
+                    <th> Fecha de Nacimiento </th>
+                    <th> Email </th>
+                    <th>  </th>
+                    <th>  </th>
+
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+@section scripts
+{
+
+    @Scripts.Render("~/Scripts/CustomScripts/datatableClientes.js")
+    <script>
+       
+    </script>
+}
